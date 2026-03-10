@@ -23,26 +23,20 @@ const skills = [
   "Performance",
 ];
 
-const stats = [
+const careerStartYear = 2022;
+
+const engagementFlow = [
   {
-    tag: "Experience",
-    value: "4+ Years",
-    label: "Production engineering experience",
+    stage: "Discover",
+    detail: "Define goals, constraints, and the right release scope.",
   },
   {
-    tag: "Delivery",
-    value: "35+",
-    label: "Product features delivered",
+    stage: "Build",
+    detail: "Ship clean, component-driven implementation with fast iteration.",
   },
   {
-    tag: "Quality",
-    value: "98%",
-    label: "Lighthouse performance target",
-  },
-  {
-    tag: "Communication",
-    value: "<24h",
-    label: "Average response time",
+    stage: "Optimize",
+    detail: "Measure outcomes, improve UX, and scale maintainably.",
   },
 ];
 
@@ -77,16 +71,56 @@ const projects = [
 ];
 
 export default function Home() {
+  const experienceYears = Math.max(1, new Date().getFullYear() - careerStartYear);
+  const isWeekend = [0, 6].includes(new Date().getDay());
+  const responseCommitment = isWeekend
+    ? "By the next business day"
+    : "Within one business day";
+
+  const stats = [
+    {
+      tag: "Experience",
+      value: `${experienceYears}+ Years`,
+      label: "Production engineering experience",
+    },
+    {
+      tag: "Delivery",
+      value: "35+",
+      label: "Product features delivered",
+    },
+    {
+      tag: "Quality",
+      value: "98%",
+      label: "Lighthouse performance target",
+    },
+    {
+      tag: "Communication",
+      value: "<24h",
+      label: "Average response time",
+    },
+  ];
+
+  const revealDelays = ["", "delay-1", "delay-2", "delay-3"];
+
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="relative min-h-screen overflow-x-clip bg-background text-foreground">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[42rem] overflow-hidden"
+      >
+        <div className="float-ambient absolute -left-28 top-14 h-72 w-72 rounded-full bg-primary/20 blur-3xl" />
+        <div className="float-ambient absolute right-[-5rem] top-44 h-80 w-80 rounded-full bg-accent/15 blur-3xl [animation-delay:1.2s]" />
+      </div>
       <SiteHeader />
       <main className="mx-auto flex w-full max-w-6xl flex-col gap-16 px-4 pb-16 pt-10 sm:gap-20 sm:px-6 sm:pb-20 sm:pt-14 lg:gap-24 lg:px-10 lg:pb-24">
         <section
           id="home"
           className="grid scroll-mt-36 gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center"
         >
-          <div>
-            <Badge className="mb-5">Available for new projects</Badge>
+          <div className="reveal-up">
+            <Badge className="mb-5 border-primary/25 bg-primary/10 text-primary">
+              Available for new projects
+            </Badge>
             <h1 className="max-w-2xl text-balance text-4xl font-semibold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
               Modern web products built with clean code and strong UX.
             </h1>
@@ -118,13 +152,17 @@ export default function Home() {
             </div>
             <div className="mt-8 flex flex-wrap gap-2">
               {skills.map((skill) => (
-                <Badge key={skill} variant="secondary">
+                <Badge
+                  key={skill}
+                  variant="secondary"
+                  className="transition-transform duration-200 hover:-translate-y-0.5"
+                >
                   {skill}
                 </Badge>
               ))}
             </div>
           </div>
-          <Card className="border-border/70 shadow-lg shadow-primary/10">
+          <Card className="reveal-up delay-1 border-border/70 shadow-lg shadow-primary/10 glass-elevated shimmer-border">
             <CardHeader>
               <CardTitle>What you can expect</CardTitle>
               <CardDescription>
@@ -132,15 +170,17 @@ export default function Home() {
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4 text-sm text-muted-foreground">
-              <div className="rounded-xl border border-border/70 bg-muted/45 p-4">
-                Clear architecture and maintainable component systems.
-              </div>
-              <div className="rounded-xl border border-border/70 bg-muted/45 p-4">
-                Fast iteration with predictable, tested implementations.
-              </div>
-              <div className="rounded-xl border border-border/70 bg-muted/45 p-4">
-                Performance-first mindset with clean UI and measurable outcomes.
-              </div>
+              {engagementFlow.map((item, index) => (
+                <div
+                  key={item.stage}
+                  className="rounded-xl border border-border/70 bg-muted/45 p-4 transition-colors duration-200 hover:border-primary/30 hover:bg-muted/70"
+                >
+                  <p className="text-xs font-semibold uppercase tracking-[0.14em] text-primary/85">
+                    {`0${index + 1} - ${item.stage}`}
+                  </p>
+                  <p className="mt-1">{item.detail}</p>
+                </div>
+              ))}
             </CardContent>
           </Card>
         </section>
@@ -150,19 +190,21 @@ export default function Home() {
             eyebrow="About"
             title="Engineering with a product perspective"
             description="I combine design sensitivity and technical depth to ship interfaces that are easy to use, easy to maintain, and aligned with business goals."
+            className="reveal-up"
           />
           <div className="mt-10 grid gap-4 sm:mt-12 sm:grid-cols-2 xl:grid-cols-4">
-            {stats.map((item) => (
+            {stats.map((item, index) => (
               <StatCard
                 key={item.label}
                 tag={item.tag}
                 value={item.value}
                 label={item.label}
+                className={`reveal-up ${revealDelays[index % revealDelays.length]}`}
               />
             ))}
           </div>
           <div className="mt-6 grid gap-4 md:grid-cols-2">
-            <Card className="border-border/70">
+            <Card className="reveal-up delay-1 border-border/70">
               <CardHeader>
                 <CardTitle>How I work</CardTitle>
               </CardHeader>
@@ -179,7 +221,7 @@ export default function Home() {
                 </p>
               </CardContent>
             </Card>
-            <Card className="border-border/70">
+            <Card className="reveal-up delay-2 border-border/70">
               <CardHeader>
                 <CardTitle>Core strengths</CardTitle>
               </CardHeader>
@@ -198,10 +240,15 @@ export default function Home() {
             eyebrow="Projects"
             title="Selected work"
             description="A sample of projects focused on business impact, technical quality, and long-term maintainability."
+            className="reveal-up"
           />
           <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {projects.map((project) => (
-              <ProjectCard key={project.title} {...project} />
+            {projects.map((project, index) => (
+              <ProjectCard
+                key={project.title}
+                {...project}
+                className={`reveal-up ${revealDelays[(index % 3) + 1]}`}
+              />
             ))}
           </div>
         </section>
@@ -211,8 +258,9 @@ export default function Home() {
             eyebrow="Contact"
             title="Let&apos;s build your next product"
             description="If you need a developer who can ship high-quality interfaces with strong engineering standards, I&apos;d be glad to collaborate."
+            className="reveal-up"
           />
-          <Card className="mt-8 border-border/70">
+          <Card className="mt-8 border-border/70 glass-elevated shimmer-border reveal-up delay-1">
             <CardContent className="grid items-start gap-8 p-6 sm:p-8 lg:grid-cols-[1.2fr_0.8fr] lg:p-10">
               <div className="space-y-6">
                 <p className="max-w-2xl text-sm leading-7 text-muted-foreground sm:text-base">
@@ -225,7 +273,7 @@ export default function Home() {
                     href="mailto:hello@muhammadhassan.dev"
                     className={buttonVariants({
                       size: "lg",
-                      className: "w-full sm:w-auto",
+                      className: "w-full sm:min-w-[14rem] sm:w-auto",
                     })}
                   >
                     hello@muhammadhassan.dev
@@ -242,7 +290,7 @@ export default function Home() {
                   </Link>
                 </div>
               </div>
-              <div className="self-start space-y-4 rounded-xl border border-border/80 bg-background/70 p-5 text-sm sm:p-6">
+              <div className="self-start space-y-4 rounded-xl border border-border/80 bg-background/70 p-5 text-sm shadow-[0_12px_28px_-24px_rgba(15,23,42,0.9)] sm:p-6">
                 <div>
                   <p className="text-muted-foreground">Location</p>
                   <p className="mt-1 font-medium">Remote, worldwide</p>
@@ -253,7 +301,7 @@ export default function Home() {
                 </div>
                 <div>
                   <p className="text-muted-foreground">Typical response</p>
-                  <p className="mt-1 font-medium">Within one business day</p>
+                  <p className="mt-1 font-medium">{responseCommitment}</p>
                 </div>
               </div>
             </CardContent>

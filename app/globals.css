@@ -78,3 +78,112 @@ body {
   background-attachment: fixed;
   min-height: 100vh;
 }
+
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.995);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes ambient-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -14px, 0);
+  }
+}
+
+@keyframes shimmer-sweep {
+  0% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: translateX(260%);
+  }
+}
+
+.reveal-up {
+  opacity: 0;
+  transform: translateY(20px) scale(0.995);
+  animation: reveal-up 700ms cubic-bezier(0.21, 1, 0.32, 1) forwards;
+  animation-delay: var(--delay, 0ms);
+}
+
+.delay-1 {
+  animation-delay: 120ms;
+}
+
+.delay-2 {
+  animation-delay: 220ms;
+}
+
+.delay-3 {
+  animation-delay: 320ms;
+}
+
+.delay-4 {
+  animation-delay: 420ms;
+}
+
+.float-ambient {
+  animation: ambient-float 11s ease-in-out infinite;
+}
+
+.glass-elevated {
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-elevated::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.18),
+    rgba(255, 255, 255, 0) 55%
+  );
+}
+
+.shimmer-border {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-border::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 38%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(47, 95, 208, 0),
+    rgba(47, 95, 208, 0.85),
+    rgba(47, 95, 208, 0)
+  );
+  animation: shimmer-sweep 3.6s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal-up,
+  .float-ambient,
+  .shimmer-border::after {
+    animation: none !important;
+    opacity: 1;
+    transform: none;
+  }
+}

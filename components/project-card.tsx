@@ -45,11 +45,11 @@ export function ProjectCard({
         <CardDescription className="pr-1">{description}</CardDescription>
       </CardHeader>
       <CardContent className="space-y-5">
-        <div className="rounded-xl border border-secondary/75 bg-[linear-gradient(145deg,rgba(229,237,249,0.48),rgba(229,237,249,0.2))] p-4 transition-colors duration-300 group-hover:border-primary/30">
-          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary/80">
+        <div className="rounded-xl border border-white/12 bg-[linear-gradient(140deg,rgba(255,255,255,0.18),rgba(255,255,255,0.06))] p-4 shadow-[0_12px_30px_rgba(15,23,42,0.35)] backdrop-blur-md transition-colors duration-300 group-hover:border-white/25">
+          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-white/70">
             Impact
           </p>
-          <p className="mt-1 text-sm font-medium text-foreground">{impact}</p>
+          <p className="mt-1 text-sm font-medium text-white">{impact}</p>
         </div>
         <div className="flex flex-wrap gap-2">
           {stack.map((item) => (

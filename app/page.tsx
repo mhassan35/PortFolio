@@ -118,7 +118,7 @@ export default function Home() {
           className="grid scroll-mt-36 gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center"
         >
           <div className="reveal-up">
-            <Badge className="mb-5 border-primary/25 bg-primary/10 text-primary">
+            <Badge className="mb-5 border-white/25 bg-white/10 text-white">
               Available for new projects
             </Badge>
             <h1 className="max-w-2xl text-balance text-4xl font-semibold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
@@ -270,13 +270,15 @@ export default function Home() {
                 </p>
                 <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                   <Link
-                    href="mailto:hello@muhammadhassan.dev"
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=mhassan909234@gmail.com"
+                    target="_blank"
+                    rel="noreferrer"
                     className={buttonVariants({
                       size: "lg",
-                      className: "w-full sm:min-w-[14rem] sm:w-auto",
+                      className: "w-full sm:min-w-56 sm:w-auto",
                     })}
                   >
-                    hello@muhammadhassan.dev
+                    Start a Project
                   </Link>
                   <Link
                     href="#home"

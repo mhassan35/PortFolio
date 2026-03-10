@@ -141,15 +141,6 @@ export function SiteHeader() {
             href="#contact"
             className={buttonVariants({
               size: "sm",
-              className: "hidden shrink-0 sm:inline-flex",
-            })}
-          >
-            Start a Project
-          </Link>
-          <Link
-            href="#contact"
-            className={buttonVariants({
-              size: "sm",
               className: "shrink-0 px-2.5 text-xs sm:hidden",
             })}
           >

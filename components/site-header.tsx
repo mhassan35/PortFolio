@@ -107,13 +107,13 @@ export function SiteHeader() {
         <div className="flex items-center justify-between gap-2 py-3 sm:py-4">
           <Link href="#home" className="flex min-w-0 flex-1 items-center gap-2 sm:gap-3">
             <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-semibold text-primary-foreground sm:h-9 sm:w-9 sm:text-base">
-              MH
+              HN
             </span>
             <span className="hidden truncate text-sm font-semibold tracking-wide sm:inline">
-              Muhammad Hassan
+              Haiqa Noor
             </span>
             <span className="truncate text-sm font-semibold tracking-wide sm:hidden">
-              M Hassan
+              H Noor
             </span>
           </Link>
           <div className="hidden items-center gap-1 md:flex">

@@ -15,58 +15,58 @@ import {
 } from "@/components/ui/card";
 
 const skills = [
-  "Next.js",
-  "TypeScript",
-  "Tailwind CSS",
-  "ShadCN UI",
-  "API Design",
-  "Performance",
+  "Lead Generation",
+  "Digital Marketing",
+  "Email Research",
+  "LinkedIn Outreach",
+  "Data Entry",
+  "Computer Operator",
 ];
 
 const careerStartYear = 2022;
 
 const engagementFlow = [
   {
-    stage: "Discover",
-    detail: "Define goals, constraints, and the right release scope.",
+    stage: "Understand",
+    detail: "I first learn about your target market, ideal customer, and what kind of leads you actually need.",
   },
   {
-    stage: "Build",
-    detail: "Ship clean, component-driven implementation with fast iteration.",
+    stage: "Research",
+    detail: "I find verified contacts using LinkedIn, Google, and trusted tools — making sure every lead is real and accurate.",
   },
   {
-    stage: "Optimize",
-    detail: "Measure outcomes, improve UX, and scale maintainably.",
+    stage: "Deliver",
+    detail: "You get a clean, organized list ready to use, with names, emails, phone numbers, and company details.",
   },
 ];
 
 const projects = [
   {
-    title: "Operations Analytics Dashboard",
+    title: "B2B Lead List for Real Estate Firm",
     description:
-      "A real-time dashboard for cross-team operations with role-based views, KPI insights, and exportable reports.",
-    impact: "Cut weekly reporting time by 62%.",
-    stack: ["Next.js", "TypeScript", "PostgreSQL", "Tailwind CSS"],
-    href: "#contact",
-    ctaLabel: "Build something similar",
+      "Built a verified lead list of property buyers and investors for a small real estate company. Used LinkedIn and Google Maps to find contact details for decision makers in target cities.",
+    impact: "Delivered 350+ verified leads with 96% email accuracy.",
+    stack: ["LinkedIn", "Google Maps", "Email Finder", "Excel"],
+    href: "https://www.upwork.com/freelancers/~016ad665ff9aa81689",
+    ctaLabel: "Get similar leads",
   },
   {
-    title: "High-Converting E-Commerce Experience",
+    title: "Email Outreach List for Digital Agency",
     description:
-      "A scalable storefront focused on speed, discoverability, and conversion through optimized flows and UI clarity.",
-    impact: "Improved conversion rate by 31%.",
-    stack: ["Next.js", "Stripe", "React Query", "ShadCN UI"],
-    href: "#contact",
-    ctaLabel: "Discuss your store",
+      "Helped a small digital marketing agency find potential clients. Researched business owners and marketing managers in the USA and UK, collected verified emails and company details.",
+    impact: "500+ qualified contacts delivered in under a week.",
+    stack: ["Hunter.io", "Apollo", "LinkedIn", "Google Sheets"],
+    href: "https://www.upwork.com/freelancers/~016ad665ff9aa81689",
+    ctaLabel: "Start your campaign",
   },
   {
-    title: "SaaS Marketing Platform",
+    title: "LinkedIn Lead Research for Software Startup",
     description:
-      "A modular marketing site and CMS workflow designed for rapid experimentation, SEO, and fast content publishing.",
-    impact: "Increased organic traffic by 2.3x in 5 months.",
-    stack: ["Next.js", "MDX", "Edge Functions", "Analytics"],
-    href: "#contact",
-    ctaLabel: "Plan your platform",
+      "Found verified decision-maker contacts for a B2B software company targeting IT managers and business owners. Cleaned and organized the data in a ready-to-use format.",
+    impact: "Built a list of 400+ warm prospects across 3 industries.",
+    stack: ["LinkedIn Sales Navigator", "Data Cleaning", "Excel", "CRM"],
+    href: "https://www.upwork.com/freelancers/~016ad665ff9aa81689",
+    ctaLabel: "Work with me",
   },
 ];
 
@@ -81,20 +81,20 @@ export default function Home() {
     {
       tag: "Experience",
       value: `${experienceYears}+ Years`,
-      label: "Production engineering experience",
+      label: "Lead generation and digital marketing",
     },
     {
-      tag: "Delivery",
-      value: "35+",
-      label: "Product features delivered",
+      tag: "Leads",
+      value: "5,000+",
+      label: "Verified leads delivered to clients",
     },
     {
-      tag: "Quality",
-      value: "98%",
-      label: "Lighthouse performance target",
+      tag: "Accuracy",
+      value: "95%+",
+      label: "Email and contact accuracy rate",
     },
     {
-      tag: "Communication",
+      tag: "Response",
       value: "<24h",
       label: "Average response time",
     },
@@ -122,12 +122,10 @@ export default function Home() {
               Available for new projects
             </Badge>
             <h1 className="max-w-2xl text-balance text-4xl font-semibold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
-              Modern web products built with clean code and strong UX.
+              I find real, verified leads so your business can grow faster.
             </h1>
             <p className="mt-6 max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground">
-              I&apos;m Muhammad Hassan, a software developer focused on building
-              reliable, scalable, and polished web experiences for startups and
-              growing product teams.
+              I&apos;m Haiqa Noor, a lead generation and digital marketing specialist. I help businesses find the right people to talk to — verified contacts, clean data, and results you can actually use.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <Link
@@ -137,7 +135,7 @@ export default function Home() {
                   className: "w-full sm:w-auto",
                 })}
               >
-                View Projects
+                View My Work
               </Link>
               <Link
                 href="#contact"
@@ -147,7 +145,7 @@ export default function Home() {
                   className: "w-full sm:w-auto",
                 })}
               >
-                Contact Me
+                Hire Me
               </Link>
             </div>
             <div className="mt-8 flex flex-wrap gap-2">
@@ -164,9 +162,9 @@ export default function Home() {
           </div>
           <Card className="reveal-up delay-1 border-border/70 shadow-lg shadow-primary/10 glass-elevated shimmer-border">
             <CardHeader>
-              <CardTitle>What you can expect</CardTitle>
+              <CardTitle>How I work with you</CardTitle>
               <CardDescription>
-                A product-minded development approach from discovery to delivery.
+                A simple, clear process from start to delivery.
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4 text-sm text-muted-foreground">
@@ -188,8 +186,8 @@ export default function Home() {
         <section id="about" className="scroll-mt-36">
           <SectionHeading
             eyebrow="About"
-            title="Engineering with a product perspective"
-            description="I combine design sensitivity and technical depth to ship interfaces that are easy to use, easy to maintain, and aligned with business goals."
+            title="Finding the right leads is my job"
+            description="I have been doing lead generation and digital marketing for a few years now. I know how to find real, verified contacts that actually match what my clients need."
             className="reveal-up"
           />
           <div className="mt-10 grid gap-4 sm:mt-12 sm:grid-cols-2 xl:grid-cols-4">
@@ -206,30 +204,26 @@ export default function Home() {
           <div className="mt-6 grid gap-4 md:grid-cols-2">
             <Card className="reveal-up delay-1 border-border/70">
               <CardHeader>
-                <CardTitle>How I work</CardTitle>
+                <CardTitle>How I approach the work</CardTitle>
               </CardHeader>
               <CardContent className="space-y-3 text-sm leading-relaxed text-muted-foreground">
                 <p>
-                  I start by clarifying goals and constraints, then design a
-                  lean technical plan that supports rapid progress without
-                  compromising maintainability.
+                  I take time to understand what you need before I start. Every client has a different target audience, so I research carefully and make sure the leads I find are actually useful to you.
                 </p>
                 <p>
-                  Throughout delivery, I prioritize clarity in code structure,
-                  component reuse, and practical documentation so teams can
-                  confidently scale the product.
+                  I always double-check the data before sending. No bad emails, no fake contacts — just clean, organized information that saves you time and helps you close more deals.
                 </p>
               </CardContent>
             </Card>
             <Card className="reveal-up delay-2 border-border/70">
               <CardHeader>
-                <CardTitle>Core strengths</CardTitle>
+                <CardTitle>My core skills</CardTitle>
               </CardHeader>
               <CardContent className="grid gap-2 text-sm text-muted-foreground">
-                <p>Component architecture and design systems</p>
-                <p>API integration and state management</p>
-                <p>Performance optimization and web vitals</p>
-                <p>Cross-functional communication and ownership</p>
+                <p>Lead generation and verified contact research</p>
+                <p>LinkedIn outreach and prospect list building</p>
+                <p>Digital marketing and online brand presence</p>
+                <p>Data entry, CRM management, and MS Office</p>
               </CardContent>
             </Card>
           </div>
@@ -238,8 +232,8 @@ export default function Home() {
         <section id="projects" className="scroll-mt-36">
           <SectionHeading
             eyebrow="Projects"
-            title="Selected work"
-            description="A sample of projects focused on business impact, technical quality, and long-term maintainability."
+            title="Work I have done"
+            description="Here are some of the projects I have worked on. All clients were small or private businesses looking for targeted leads and outreach support."
             className="reveal-up"
           />
           <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
@@ -256,21 +250,19 @@ export default function Home() {
         <section id="contact" className="scroll-mt-36">
           <SectionHeading
             eyebrow="Contact"
-            title="Let&apos;s build your next product"
-            description="If you need a developer who can ship high-quality interfaces with strong engineering standards, I&apos;d be glad to collaborate."
+            title="Let&apos;s work together"
+            description="If you need verified leads, email lists, or digital marketing help, I am ready to start. Reach out and tell me what you need."
             className="reveal-up"
           />
           <Card className="mt-8 border-border/70 glass-elevated shimmer-border reveal-up delay-1">
             <CardContent className="grid items-start gap-8 p-6 sm:p-8 lg:grid-cols-[1.2fr_0.8fr] lg:p-10">
               <div className="space-y-6">
                 <p className="max-w-2xl text-sm leading-7 text-muted-foreground sm:text-base">
-                  Share your goals, current product stage, and timeline. I can
-                  help with new builds, ongoing product development, or UI
-                  modernization for existing platforms.
+                  Tell me about your business, who you want to reach, and how many leads you need. I will come back to you quickly with a plan and timeline.
                 </p>
                 <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                   <Link
-                    href="https://mail.google.com/mail/?view=cm&fs=1&to=mhassan909234@gmail.com"
+                    href="https://www.upwork.com/freelancers/~016ad665ff9aa81689"
                     target="_blank"
                     rel="noreferrer"
                     className={buttonVariants({
@@ -278,17 +270,35 @@ export default function Home() {
                       className: "w-full sm:min-w-56 sm:w-auto",
                     })}
                   >
-                    Start a Project
+                    Hire Me on Upwork
                   </Link>
                   <Link
-                    href="#home"
+                    href="https://www.linkedin.com/in/aqiahnoor05/"
+                    target="_blank"
+                    rel="noreferrer"
                     className={buttonVariants({
                       variant: "outline",
                       size: "lg",
                       className: "w-full sm:w-auto",
                     })}
                   >
-                    Back to Top
+                    Connect on LinkedIn
+                  </Link>
+                </div>
+                <div className="flex flex-wrap gap-3 text-sm">
+                  <Link
+                    href="mailto:haiqanoor36.36@gmail.com"
+                    className="text-muted-foreground underline underline-offset-4 hover:text-foreground transition-colors"
+                  >
+                    haiqanoor36.36@gmail.com
+                  </Link>
+                  <Link
+                    href="https://www.facebook.com/share/18niqT6VGz/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-muted-foreground underline underline-offset-4 hover:text-foreground transition-colors"
+                  >
+                    Facebook
                   </Link>
                 </div>
               </div>
@@ -299,7 +309,37 @@ export default function Home() {
                 </div>
                 <div>
                   <p className="text-muted-foreground">Availability</p>
-                  <p className="mt-1 font-medium">Open for freelance and full-time roles</p>
+                  <p className="mt-1 font-medium">Open for freelance work</p>
+                </div>
+                <div>
+                  <p className="text-muted-foreground">Find me on</p>
+                  <div className="mt-1 flex flex-col gap-1 font-medium">
+                    <Link
+                      href="https://www.upwork.com/freelancers/~016ad665ff9aa81689"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-primary hover:underline"
+                    >
+                      Upwork Profile
+                    </Link>
+                    <Link
+                      href="https://www.linkedin.com/in/aqiahnoor05/"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-primary hover:underline"
+                    >
+                      LinkedIn Profile
+                    </Link>
+                  </div>
+                </div>
+                <div>
+                  <p className="text-muted-foreground">Email</p>
+                  <Link
+                    href="mailto:haiqanoor36.36@gmail.com"
+                    className="mt-1 block font-medium text-primary hover:underline break-all"
+                  >
+                    haiqanoor36.36@gmail.com
+                  </Link>
                 </div>
                 <div>
                   <p className="text-muted-foreground">Typical response</p>

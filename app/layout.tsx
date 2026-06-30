@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "M Hassan's Portfolio",
-  description: "A portfolio showcasing the projects and skills of Muhammad Hassan, a software developer specializing in web development and design.",
+  title: "Haiqa Noor | Lead Generation & Digital Marketing",
+  description: "Haiqa Noor is a lead generation and digital marketing specialist. She finds verified, targeted leads for businesses worldwide. Available for freelance work on Upwork.",
 };
 
 export default function RootLayout({

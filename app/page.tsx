@@ -32,7 +32,7 @@ const engagementFlow = [
   },
   {
     stage: "Research",
-    detail: "I find verified contacts using LinkedIn, Google, and trusted tools — making sure every lead is real and accurate.",
+    detail: "I find verified contacts using LinkedIn, Google, and trusted tools, making sure every lead is real and accurate.",
   },
   {
     stage: "Deliver",
@@ -125,7 +125,7 @@ export default function Home() {
               I find real, verified leads so your business can grow faster.
             </h1>
             <p className="mt-6 max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground">
-              I&apos;m Haiqa Noor, a lead generation and digital marketing specialist. I help businesses find the right people to talk to — verified contacts, clean data, and results you can actually use.
+              I&apos;m Haiqa Noor, a lead generation and digital marketing specialist. I help businesses find the right people to talk to: verified contacts, clean data, and results you can actually use.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <Link
@@ -211,7 +211,7 @@ export default function Home() {
                   I take time to understand what you need before I start. Every client has a different target audience, so I research carefully and make sure the leads I find are actually useful to you.
                 </p>
                 <p>
-                  I always double-check the data before sending. No bad emails, no fake contacts — just clean, organized information that saves you time and helps you close more deals.
+                  I always double-check the data before sending. No bad emails, no fake contacts. Just clean, organized information that saves you time and helps you close more deals.
                 </p>
               </CardContent>
             </Card>
